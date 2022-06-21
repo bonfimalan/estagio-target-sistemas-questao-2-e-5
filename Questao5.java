@@ -16,10 +16,16 @@ public class Questao5 {
     System.out.println(reverse(string));
   }
 
+  /**
+   * Inverte os carateres de uma string
+   * 
+   * @param string uma frase ou palavra
+   * @return a frase ou palavra em ordem inversa
+   */
   public static String reverse(String string) {
     int stringSize = string.length();
     char[] reversedString = new char[stringSize];
-    stringSize--;
+    stringSize--; // a variável agora tem o valor do último indice do vetor de caracteres
 
     for (char c : string.toCharArray()) {
       reversedString[stringSize] = c;

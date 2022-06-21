@@ -7,6 +7,10 @@ var diasValidos = 0;
 var maiorValor = array[0];
 var menorValor = array[0];
 
+// percorre os elemotos do vetor de dados
+// calcula o total, para a média
+// calcula o mes com maior faturamento
+// calcula o mes com menor faturamento
 array.forEach(element => {
   if (element.valor != 0){
     diasValidos++;
@@ -18,8 +22,10 @@ array.forEach(element => {
   }
 });
 
+// calcula a média, ignorando os dias que o faturamento foi 0
 media = total / diasValidos;
 
+// conta os dias com faturamento maior que a média
 array.forEach(element => {
   if (element.valor > media){
     diasFaturamentoMaior++;
